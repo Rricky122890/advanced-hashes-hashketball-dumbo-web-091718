@@ -121,35 +121,37 @@ end
     data[:players].each do |key,value|
       if key==name
         return value[:points]
-      end
-    end
   end
+end
+ end
 end
  
  def shoe_size (name)
-  game_hash.each do |home_away,data|
-    data[:players].each do |key,value|
-      if key==name
-        return value[:shoe]
-      end
-    end
+game_hash.each do |home_away, data|
+data[:players].each do |key, value| 
+   if name == key
+   return value[:shoe]
+   end
+  end
   end
 end
  
  def team_colors(team_name)
-  game_hash.each do |home_away, data|
-    if data[:team_name]==team_name
-      return data[:colors]
-    end
-  end
+game_hash.each do |home_away, data| 
+if data[:team_name] == team_name 
+return data[:colors]
 end
+end
+end 
  
- def team_names 
-  arr=[]
-  game_hash.each do |home_away,data|
-    arr << data[:team_name]
-  end
-  arr
+ def team_names(game_hash)
+arr = []
+game_hash.each do |home_away, data|
+
+arr << data[:team_name]
+
+end
+return arr
 end
  
  def player_numbers(team_name)
@@ -169,9 +171,9 @@ def player_stats(name)
     data[:players].each do |key,value|
       if key==name
         return value
-      end
     end
-  end
+   end
+end
 end
  
  def big_shoe_rebounds
@@ -183,7 +185,7 @@ end
         max=value[:shoe]
         rebounds=value[:rebounds]
       end
-    end
+   end
   end
   rebounds
 end
