@@ -115,6 +115,7 @@ def game_hash
                 }
                 }
 end
+ 
  def num_points_scored(name)
   game_hash.each do |home_away,data|
     data[:players].each do |key,value|
@@ -124,6 +125,7 @@ end
     end
   end
 end
+ 
  def shoe_size (name)
   game_hash.each do |home_away,data|
     data[:players].each do |key,value|
@@ -133,6 +135,7 @@ end
     end
   end
 end
+ 
  def team_colors(team_name)
   game_hash.each do |home_away, data|
     if data[:team_name]==team_name
@@ -140,6 +143,7 @@ end
     end
   end
 end
+ 
  def team_names 
   arr=[]
   game_hash.each do |home_away,data|
@@ -147,6 +151,7 @@ end
   end
   arr
 end
+ 
  def player_numbers(team_name)
   arr=[]
   game_hash.each do |home_away,data|
@@ -168,6 +173,7 @@ def player_stats(name)
     end
   end
 end
+ 
  def big_shoe_rebounds
   rebounds=0
   max=0
