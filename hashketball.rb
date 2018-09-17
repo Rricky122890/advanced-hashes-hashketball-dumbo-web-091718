@@ -1,3 +1,4 @@
+require "pry"
 # Write your code here!
 def game_hash
     {
@@ -153,6 +154,7 @@ arr << data[:team_name]
 end
 return arr
 end
+
  
  def player_numbers(team_name)
   arr=[]
@@ -190,8 +192,17 @@ end
   rebounds
 end
 
+def player_by_number(num)
+  game_hash.each do |home_away, data|
+  data[:players].each do |player, stats|
+     if num == stats[:number] 
+      return player 
+     end
+   end
+  end
+end
 
-
+puts player_by_number(2)
 
 
 
